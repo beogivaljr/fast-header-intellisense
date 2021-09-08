@@ -8,8 +8,9 @@
 - [Installation](#Installation)
 - [Extension Settings](#Extension-Settings)
 - [Known Issues](#Known-Issues)
-    - [General](#1.-General)
-    - [UE4 ( \_\_LINE\_\_ issue )](#2.-UE4)
+    - General
+    - No change on header switch
+    - Unreal Engine ( \_\_LINE\_\_ issue )
 -----------
 
 ## Features
@@ -18,15 +19,17 @@ Switches to the faster Tag Parser Intellisense for header files.
 Switches back to Context Aware Intellisense for Source files.
 
 ## Requirements
-C/C++ project
+- C/C++ project
 
-VSCode **1.60.0+** with Microsoft C++ extension **1.6.0+**
+- VSCode **1.60.0+** with Microsoft C++ extension **1.6.0+**
 
-(I had anomalies with previous versions of VSCode/MS C++ extension. I'm not sure when it was fixed.)
+    (I had anomalies with previous versions of VSCode/MS C++ extension. I'm not sure when it was fixed.)
+
+- VSCode Workspace project (The Intellisense engine changes happen in the *.code-workspace file)
 
 ## General
 
-In VSCode there are two different Intellisense settings:
+In VSCode there are two different Intellisense engines:
 
 1. Tag Parser (symbols only) fast but not smart.
 
@@ -38,7 +41,7 @@ On the info bar, the fire icon represents Context Aware Intellisense and the cyl
 ![](https://gist.githubusercontent.com/boocs/cacdbb0baab688d4d87c3bfebe55c553/raw/0062ac97dc8e1d02e970068b35ac5ffd2fd1fd95/tag_context_icons.JPG)
 
 ## Installation
-1. Download from here: TODO
+1. Download from here: https://github.com/boocs/fast-header-intellisense/releases
 
 2. Click the VSIX file to download 
 
@@ -54,7 +57,7 @@ On the info bar, the fire icon represents Context Aware Intellisense and the cyl
 ## Extension Settings
 
 #### Info Bar
-You can change Intellisense modes by clicking the info bar lock icon.
+You can change Intellisense engines by clicking the info bar lock icon.
 
 ![](https://gist.githubusercontent.com/boocs/cacdbb0baab688d4d87c3bfebe55c553/raw/0062ac97dc8e1d02e970068b35ac5ffd2fd1fd95/lock_icon.JPG)
 
@@ -68,11 +71,14 @@ You can change Intellisense modes by clicking the info bar lock icon.
 ## Known Issues
 
 #### 1. General
-When I first tested this extension there were anomalies. VSCode didn't like switching Intellisense modes on the fly. Retesting this currently didn't reveal any.
+When I first tested this extension there were anomalies. VSCode didn't like switching Intellisense engines on the fly. Retesting this currently didn't reveal any promblems.
 
 This was also my first Typescript/VSCode API attempt. Let me know if there's anything wrong.
 
-#### 2. UE4
+#### 2. No change on header switch
+This project changes Intellisense engines by using the *.code-workspace file. If you use the "C_Cpp.intelliSenseEngine" setting in a higher priority settings file then this extension will not work.
+
+#### 3. Unreal Engine
 Tag Parser Intellisense doesn't recognize compiler errors.
 
 The Unreal Engine uses the \_\_LINE\_\_ preprocessor macro in the header file classes' GENERATED_* macro.
