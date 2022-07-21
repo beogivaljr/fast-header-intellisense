@@ -40,6 +40,11 @@ Working with header files seem fine without Context Aware Intellisense. Having f
 On the info bar, the fire icon represents Context Aware Intellisense and the cylinder icon for Tag Parser. They are only visible when they are processing Intellisense.
 ![](https://gist.githubusercontent.com/boocs/cacdbb0baab688d4d87c3bfebe55c553/raw/0062ac97dc8e1d02e970068b35ac5ffd2fd1fd95/tag_context_icons.JPG)
 
+
+**Note:**
+* For large projects, the Tag Parser can take ~20 minutes to gather all symbols. This happens once on first load of project.
+* The Tag Parser is still used for some functions even if the Intellisense engine is set to Context Aware.
+
 ## Installation
 1. Download from here: https://github.com/boocs/fast-header-intellisense/releases
 

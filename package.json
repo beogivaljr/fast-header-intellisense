@@ -3,7 +3,7 @@
 	"displayName": "Fast Header Intellisense",
 	"description": "Uses faster Tag Parser Intellisense for C/C++ header files.",
 	"publisher" : "boocs",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "SEE LICENSE IN THE FILE: LICENSE",
 	"repository": {
 		"type": "git",

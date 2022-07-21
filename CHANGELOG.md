@@ -2,6 +2,10 @@
 
 All notable changes to the "Fast Header Intellisense" extension will be documented in this file.
 
+## [1.0.1] - 2022-07-20
+### Added
+- Error message to show why API config update function threw exception
+
 ## [1.0.0] - 2021-09-07
 ### Added
 - Extension switches to Tag Parser intellisense on header files and back to Context Aware Intellisense on source files

@@ -68,7 +68,12 @@ async function changeIntellisenseSetting(intellisense : Intellisense): Promise<v
 		await config.update(CON.URI_SET_INTELLISENSE_ENGINE, intellisense_value, CON.UPDATE_WORKSPACE_CONFIG);
 		
 	} catch (error) {
-		console.error("changeIntellisenseSettings() threw an error.");
+		if(error instanceof(Error)){
+			console.error(`changeIntellisenseSettings() threw an error: ${error.message}`);
+		}
+		else {
+			console.error("changeIntellisenseSettings() threw an error");
+		}
 		return;
 	}
 
