@@ -14,8 +14,8 @@ export const URI_SUBCAT_ACTION = "action";
 export const URI_SET_INTELLISENSE_ENGINE = "intelliSenseEngine";
 
 export const URI_VAL_TAGPARSER = "Tag Parser";
-export const URI_VAL_DEFAULT = "Default";
-export const URI_VAL_DISABLED = "Disabled";
+export const URI_VAL_DEFAULT = "default";
+export const URI_VAL_DISABLED = "disabled";
 export const URI_VAL_LOCK_TOGGLE = "lockToggle";
 
 export const URI_FUL_RELOAD_WINDOW = "workbench.action.reloadWindow";
